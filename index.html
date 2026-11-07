@@ -17,7 +17,7 @@ h1{font-size:clamp(70px,11vw,116px);letter-spacing:-.08em;line-height:1;margin:1
 .links a:hover{border-color:#0d9488}.links a.primary{background:#17384a;color:white;border-color:#17384a}
 section{margin:0 auto 66px}h2{font-size:30px;letter-spacing:-.035em;margin:0 0 13px}section>p{font-size:16px;line-height:1.75;color:#516579;max-width:790px;margin:0 0 26px}
 .figure{background:#f6fafb;border:1px solid #e1eaf0;border-radius:18px;overflow:hidden;position:relative}
-.figure img{display:none;width:100%;height:auto;object-fit:contain}.figure.loaded img{display:block}.figure.loaded .placeholder{display:none}
+.figure img{display:block;width:100%;height:auto;object-fit:contain}.figure:not(.loaded) img{position:absolute;opacity:0;pointer-events:none}.figure.loaded .placeholder{display:none}
 .figure.framework{min-height:300px}.figure.framework .placeholder{min-height:300px}
 .placeholder{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:30px;gap:12px;color:#64798b}
 .placeholder svg{width:68px;height:68px;color:#9db4be}
@@ -51,7 +51,7 @@ footer{text-align:center;padding:0 20px 36px;font-size:13px;color:#97a6b3}
 <h2>Framework</h2>
 <p>FLoRA represents multiple task-equivalent realizations and evaluates their executability under different robot embodiments. A realization can be selected or reselected when execution conditions change, while local closed-loop control handles motion execution.</p>
 <div class="figure framework">
-<img src="./assets/framework.png?v=20261107-2" alt="FLoRA framework overview" loading="lazy">
+<img src="./assets/framework.png?v=20261107-2" alt="FLoRA framework overview" loading="eager">
 <div class="placeholder"><svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="5" y="24" width="21" height="27" rx="4"/><rect x="54" y="24" width="21" height="27" rx="4"/><rect x="30" y="5" width="20" height="27" rx="4"/><path d="M26 38h12V32M50 19h12v19M40 32v29H28M40 61h14"/><path d="m50 56 5 5-5 5"/></svg><strong>Framework overview</strong><small>Add your actual figure to <code>assets/framework.png</code> to display it here.</small></div>
 </div><p class="caption">Fig. 1 · FLoRA framework overview</p>
 </section>
@@ -59,9 +59,9 @@ footer{text-align:center;padding:0 20px 36px;font-size:13px;color:#97a6b3}
 <h2>Robot Deployments</h2>
 <p>Examples across different embodiments and task configurations. Replace the image placeholders with actual simulation screenshots, animated GIFs, or rollout stills.</p>
 <div class="deployments">
-<article class="robot"><div class="figure"><img src="assets/panda.gif" alt="Panda robot pouring rollout" loading="lazy"><div class="placeholder"><strong>Panda rollout</strong><small>assets/panda.gif</small></div></div><div class="desc"><h3>Franka Panda</h3><p>Embodiment-specific realization selection</p></div></article>
-<article class="robot"><div class="figure"><img src="assets/ur5e.gif" alt="UR5e robot pouring rollout" loading="lazy"><div class="placeholder"><strong>UR5e rollout</strong><small>assets/ur5e.gif</small></div></div><div class="desc"><h3>UR5e</h3><p>Reselection under changing conditions</p></div></article>
-<article class="robot"><div class="figure"><img src="assets/sawyer.gif" alt="Sawyer robot pouring rollout" loading="lazy"><div class="placeholder"><strong>Sawyer rollout</strong><small>assets/sawyer.gif</small></div></div><div class="desc"><h3>Sawyer</h3><p>Cross-embodiment evaluation</p></div></article>
+<article class="robot"><div class="figure"><img src="assets/panda.gif" alt="Panda robot pouring rollout" loading="eager"><div class="placeholder"><strong>Panda rollout</strong><small>assets/panda.gif</small></div></div><div class="desc"><h3>Franka Panda</h3><p>Embodiment-specific realization selection</p></div></article>
+<article class="robot"><div class="figure"><img src="assets/ur5e.gif" alt="UR5e robot pouring rollout" loading="eager"><div class="placeholder"><strong>UR5e rollout</strong><small>assets/ur5e.gif</small></div></div><div class="desc"><h3>UR5e</h3><p>Reselection under changing conditions</p></div></article>
+<article class="robot"><div class="figure"><img src="assets/sawyer.gif" alt="Sawyer robot pouring rollout" loading="eager"><div class="placeholder"><strong>Sawyer rollout</strong><small>assets/sawyer.gif</small></div></div><div class="desc"><h3>Sawyer</h3><p>Cross-embodiment evaluation</p></div></article>
 </div>
 <p class="note">Images are not yet uploaded. The placeholders do not represent experimental results. Additional deployment examples can be added without changing the page layout.</p>
 </section>
