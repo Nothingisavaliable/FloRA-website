@@ -2,84 +2,79 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="FLoRA — Multiple task realizations for embodiment-adaptive robot manipulation.">
-<meta name="theme-color" content="#ffffff"><title>FLoRA — Robot Manipulation</title>
+<meta name="description" content="FLoRA: Multiple Task Realizations for Embodiment-Adaptive Robot Manipulation">
+<title>FLoRA | Project Page</title>
 <style>
-:root{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#172436;background:#fff}
+:root{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#14263a;background:#fff}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0}a{color:inherit}
-.wrap{width:min(950px,calc(100% - 36px));margin:auto}
-header{padding:65px 0 28px;text-align:center}
-.kicker{font-size:12px;letter-spacing:.16em;color:#0f948e;font-weight:750;text-transform:uppercase}
-h1{font-size:clamp(65px,11vw,106px);letter-spacing:-.085em;line-height:1;margin:17px 0 12px;font-weight:850}
-h1 em{color:#12a69e;font-style:normal}.subtitle{font-size:clamp(19px,3.6vw,27px);font-weight:560;line-height:1.38;max-width:790px;margin:0 auto;color:#2d4051}
-.affiliation{font-size:15px;color:#64748b;margin:23px 0}
-.links{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;margin:27px 0 29px}.links a{font-size:14px;font-weight:650;text-decoration:none;border:1px solid #c9d5dc;border-radius:40px;padding:10px 19px;transition:.2s}.links a:hover{transform:translateY(-2px);border-color:#12a69e}.links a.main{background:#132f41;border-color:#132f41;color:#fff}
-main{padding:0 0 60px}
-.demo{background:linear-gradient(145deg,#f7fbfc,#edf9f6);border:1px solid #d9e8e9;border-radius:23px;padding:22px;box-shadow:0 15px 50px #243a4710}
-.demo-head{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
-.demo-head strong{font-size:17px}.demo-head small{color:#66798b}
-svg{width:100%;height:auto;display:block}
-.route{fill:none;stroke-width:5;stroke-linecap:round;stroke-dasharray:7 13;opacity:.18;transition:opacity .25s,stroke-width .25s}.route.on{opacity:1;stroke-width:7;animation:march 2.2s linear infinite}@keyframes march{to{stroke-dashoffset:-60}}
-.controls{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:9px}
-.controls button{font:inherit;font-size:14px;font-weight:650;color:#334b5c;background:white;border:1px solid #cad8de;border-radius:24px;padding:11px 17px;cursor:pointer}
-.controls button[aria-pressed=true]{background:#116e68;color:#fff;border-color:#116e68}
-.hint{text-align:center;color:#748493;font-size:12px;margin:17px 0 3px}
-.about{max-width:750px;margin:65px auto 0;padding:0 8px}.about h2{font-size:25px;letter-spacing:-.03em;margin:0 0 12px}.about p{font-size:16px;line-height:1.8;color:#42576a;margin:0 0 16px}
-footer{text-align:center;font-size:13px;color:#9aa9b4;padding:0 0 35px}
-@media(max-width:580px){header{padding-top:44px}.demo{padding:12px}.links a{padding:9px 14px}.controls button{padding:9px 12px}.demo-head strong{font-size:14px}}
-@media(prefers-reduced-motion:reduce){.route.on{animation:none}html{scroll-behavior:auto}}
+.container{width:min(1040px,calc(100% - 40px));margin:auto}
+header{text-align:center;padding:74px 0 46px}.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:12px;color:#078c88;font-weight:750}
+h1{font-size:clamp(70px,11vw,116px);letter-spacing:-.08em;line-height:1;margin:16px 0 13px;font-weight:820}h1 span{color:#0ea5a0}
+.subtitle{max-width:800px;margin:0 auto;font-size:clamp(21px,3vw,29px);line-height:1.38;font-weight:550;color:#30475a}
+.affiliation{margin:21px 0;color:#6d8090}
+.links{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:29px}
+.links a{padding:10px 21px;border-radius:999px;border:1px solid #cbd5df;text-decoration:none;font-weight:650;font-size:14px}
+.links a:hover{border-color:#0d9488}.links a.primary{background:#17384a;color:white;border-color:#17384a}
+section{margin:0 auto 66px}h2{font-size:30px;letter-spacing:-.035em;margin:0 0 13px}section>p{font-size:16px;line-height:1.75;color:#516579;max-width:790px;margin:0 0 26px}
+.figure{background:#f6fafb;border:1px solid #e1eaf0;border-radius:18px;overflow:hidden;position:relative}
+.figure img{display:none;width:100%;height:auto;object-fit:contain}.figure.loaded img{display:block}.figure.loaded .placeholder{display:none}
+.figure.framework{min-height:300px}.figure.framework .placeholder{min-height:300px}
+.placeholder{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:30px;gap:12px;color:#64798b}
+.placeholder svg{width:68px;height:68px;color:#9db4be}
+.placeholder strong{font-size:17px;color:#3a5364}.placeholder small{font-size:13px;max-width:360px;line-height:1.6}
+.caption{text-align:center;font-size:13px;color:#73869a;margin:13px 0 0}
+.deployments{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.robot{border:1px solid #e0e9ed;border-radius:18px;overflow:hidden;background:#fff}
+.robot .figure{border:0;border-radius:0;aspect-ratio:4/3}.robot .figure img{height:100%;object-fit:cover}
+.robot .figure .placeholder{height:100%;min-height:210px}.robot .placeholder strong{font-size:16px}
+.robot .desc{padding:15px 18px 18px}.robot h3{font-size:19px;margin:0 0 5px}.robot p{font-size:13px;color:#728395;line-height:1.6;margin:0}
+.note{font-size:13px;color:#76899b;margin-top:20px;line-height:1.6}
+.about{max-width:840px}.about p{font-size:16px;line-height:1.85;color:#506577}
+footer{text-align:center;padding:0 20px 36px;font-size:13px;color:#97a6b3}
+@media(max-width:720px){header{padding:50px 0 34px}.deployments{grid-template-columns:1fr}.robot .figure{aspect-ratio:16/9}section{margin-bottom:50px}.figure.framework,.figure.framework .placeholder{min-height:220px}}
 </style>
 </head>
 <body>
-<header class="wrap">
-<div class="kicker">Robot Learning · Project Page</div>
-<h1>FL<em>o</em>RA</h1>
+<header class="container">
+<div class="eyebrow">Robot Learning · Project Page</div>
+<h1>FL<span>o</span>RA</h1>
 <p class="subtitle">Multiple Task Realizations for Embodiment-Adaptive Robot Manipulation</p>
 <p class="affiliation">The University of Tokyo</p>
-<nav class="links" aria-label="Project links">
-<a class="main" href="#demo">Interactive Demo</a>
-<a href="#about">About</a>
+<nav class="links" aria-label="Project navigation">
+<a class="primary" href="#framework">Framework</a>
+<a href="#deployments">Robot Deployments</a>
 <a href="https://github.com/Nothingisavaliable/FloRA-website" target="_blank" rel="noopener noreferrer">Website Code ↗</a>
 </nav>
 </header>
-<main class="wrap">
-<section class="demo" id="demo" aria-labelledby="demo-title">
-<div class="demo-head"><strong id="demo-title">One task. Multiple motion realizations.</strong><small id="selection">Mode B · Middle</small></div>
-<svg viewBox="0 0 920 420" role="img" aria-label="Animated conceptual diagram showing three possible paths between a source cup and target bowl, around an obstacle">
-<defs><linearGradient id="surface" x2="0" y2="1"><stop stop-color="#e8f2f5"/><stop offset="1" stop-color="#d4e4e9"/></linearGradient></defs>
-<rect x="16" y="14" width="888" height="388" rx="18" fill="#fff" opacity=".58"/>
-<rect x="55" y="348" width="810" height="19" rx="9" fill="url(#surface)"/>
-<path d="M108 260L122 331Q185 353 249 331L260 260Z" fill="#b7dfe8" stroke="#518ea4" stroke-width="5"/>
-<ellipse cx="184" cy="260" rx="76" ry="14" fill="#f9ffff" stroke="#518ea4" stroke-width="5"/>
-<path d="M261 276Q308 260 302 303Q300 324 259 320" fill="none" stroke="#518ea4" stroke-width="13" stroke-linecap="round"/>
-<ellipse cx="721" cy="319" rx="99" ry="22" fill="#c5eee7" stroke="#399d91" stroke-width="5"/>
-<path d="M622 319Q627 363 721 364Q815 363 820 319" fill="#a9ded5" stroke="#399d91" stroke-width="5"/>
-<rect x="433" y="259" width="83" height="77" rx="13" fill="#ecc18e" opacity=".55"/><rect x="443" y="269" width="63" height="57" rx="7" fill="#e4a65f" opacity=".45"/>
-<path class="route" id="route-a" stroke="#e5a34e" d="M268 258C333 92 481 59 629 176S697 235 721 281"/>
-<path class="route on" id="route-b" stroke="#11a59c" d="M268 258C376 218 483 185 593 218S684 263 721 281"/>
-<path class="route" id="route-c" stroke="#8b82d4" d="M268 258C321 352 474 352 594 321S691 294 721 281"/>
-<g id="cursor" transform="translate(268 258)"><circle r="22" fill="#13a99d" opacity=".2"/><circle r="11" fill="#0f8f86" stroke="#fff" stroke-width="4"/></g>
-<g fill="#667d8e" font-family="inherit" font-size="16" font-weight="600"><text x="184" y="392" text-anchor="middle">Source</text><text x="721" y="392" text-anchor="middle">Target</text><text x="474" y="392" text-anchor="middle">Obstacle</text></g>
-</svg>
-<div class="controls" role="group" aria-label="Select trajectory realization">
-<button type="button" data-mode="a" aria-pressed="false">Mode A · Upper</button>
-<button type="button" data-mode="b" aria-pressed="true">Mode B · Middle</button>
-<button type="button" data-mode="c" aria-pressed="false">Mode C · Lower</button>
+<main class="container">
+<section id="framework">
+<h2>Framework</h2>
+<p>FLoRA represents multiple task-equivalent realizations and evaluates their executability under different robot embodiments. A realization can be selected or reselected when execution conditions change, while local closed-loop control handles motion execution.</p>
+<div class="figure framework">
+<img src="assets/framework.png" alt="FLoRA framework overview" loading="lazy">
+<div class="placeholder"><svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="5" y="24" width="21" height="27" rx="4"/><rect x="54" y="24" width="21" height="27" rx="4"/><rect x="30" y="5" width="20" height="27" rx="4"/><path d="M26 38h12V32M50 19h12v19M40 32v29H28M40 61h14"/><path d="m50 56 5 5-5 5"/></svg><strong>Framework overview</strong><small>Add your actual figure to <code>assets/framework.png</code> to display it here.</small></div>
+</div><p class="caption">Fig. 1 · FLoRA framework overview</p>
+</section>
+<section id="deployments">
+<h2>Robot Deployments</h2>
+<p>Examples across different embodiments and task configurations. Replace the image placeholders with actual simulation screenshots, animated GIFs, or rollout stills.</p>
+<div class="deployments">
+<article class="robot"><div class="figure"><img src="assets/panda.gif" alt="Panda robot pouring rollout" loading="lazy"><div class="placeholder"><strong>Panda rollout</strong><small>assets/panda.gif</small></div></div><div class="desc"><h3>Franka Panda</h3><p>Embodiment-specific realization selection</p></div></article>
+<article class="robot"><div class="figure"><img src="assets/ur5e.gif" alt="UR5e robot pouring rollout" loading="lazy"><div class="placeholder"><strong>UR5e rollout</strong><small>assets/ur5e.gif</small></div></div><div class="desc"><h3>UR5e</h3><p>Reselection under changing conditions</p></div></article>
+<article class="robot"><div class="figure"><img src="assets/sawyer.gif" alt="Sawyer robot pouring rollout" loading="lazy"><div class="placeholder"><strong>Sawyer rollout</strong><small>assets/sawyer.gif</small></div></div><div class="desc"><h3>Sawyer</h3><p>Cross-embodiment evaluation</p></div></article>
 </div>
-<p class="hint">Conceptual visualization. Not a measured robot rollout or simulation result.</p>
+<p class="note">Images are not yet uploaded. The placeholders do not represent experimental results. Additional deployment examples can be added without changing the page layout.</p>
 </section>
-<section id="about" class="about">
+<section class="about" id="about">
 <h2>About FLoRA</h2>
-<p>The same object-centric manipulation task can admit multiple task-equivalent realizations, but their executability depends on robot embodiment, kinematics, and obstacles. FLoRA represents these alternatives explicitly and evaluates them to choose suitable motions for closed-loop execution.</p>
-<p>When conditions change, FLoRA can reselect a feasible realization rather than committing to one fixed task-space motion. Real rollout animations and paper links will be added when ready.</p>
+<p>Object-centric demonstrations describe task-level motion without committing to a particular robot. However, a task-space motion can become infeasible because of kinematic limits, collision constraints, or imperfect tracking. FLoRA bridges this generalization–execution gap through explicit alternatives, embodiment-aware evaluation, and closed-loop adaptation.</p>
 </section>
-</main>
-<footer>FLoRA · The University of Tokyo</footer>
+</main><footer>FLoRA · The University of Tokyo</footer>
 <script>
-(()=>{const paths={a:document.getElementById('route-a'),b:document.getElementById('route-b'),c:document.getElementById('route-c')};const cursor=document.getElementById('cursor'),label=document.getElementById('selection');const names={a:'Upper',b:'Middle',c:'Lower'};let current='b',begin=null;
-document.querySelectorAll('[data-mode]').forEach(button=>button.addEventListener('click',()=>{current=button.dataset.mode;begin=null;Object.entries(paths).forEach(([k,path])=>path.classList.toggle('on',k===current));document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===current)));label.textContent='Mode '+current.toUpperCase()+' · '+names[current]}));
-const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-function draw(time){if(begin===null)begin=time;const p=paths[current],length=p.getTotalLength(),u=reduced?0.68:((time-begin)%4300)/4300;const q=p.getPointAtLength(u*length);cursor.setAttribute('transform','translate('+q.x+' '+q.y+')');if(!reduced)requestAnimationFrame(draw)}requestAnimationFrame(draw);
-})();
+document.querySelectorAll(".figure img").forEach(img=>{
+const show=()=>img.parentElement.classList.add("loaded");
+if(img.complete&&img.naturalWidth>0)show();
+else img.addEventListener("load",show,{once:true});
+});
 </script>
 </body></html>
