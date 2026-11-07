@@ -1,23 +1,33 @@
 # FLoRA Project Website
 
-Minimal, responsive academic project page for **FLoRA — Multiple Task Realizations for Embodiment-Adaptive Robot Manipulation**.
+Minimal academic project page for **FLoRA — Multiple Task Realizations for Embodiment-Adaptive Robot Manipulation**.
 
-## Contents
-- `index.html` — self-contained webpage (HTML, CSS and JavaScript)
-- Interactive conceptual illustration of three alternative motion realizations
-- Short research description
+## Website
+https://nothingisavaliable.github.io/FloRA-website/
 
-The animation is **illustrative only** and does not represent recorded physical experiments or robot rollouts.
+The site is a dependency-free HTML/CSS page, hosted through GitHub Pages.
 
-## Publish using GitHub Pages
+## Add your research figures
 
-1. Open the repository's **Settings → Pages**.
-2. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
-3. Choose **main** and **/(root)**, then **Save**.
-4. Once GitHub finishes deployment, visit:
-   https://nothingisavaliable.github.io/FloRA-website/
+Upload the following files using the same names and paths:
 
-## Customization
-- Edit title and overview directly in `index.html`.
-- Add actual GIFs/videos and manuscript links when available.
-- No build tools or dependencies are required.
+| File | Website location | Recommended content |
+| --- | --- | --- |
+| `assets/framework.png` | Framework | Architecture overview figure, exported from your paper |
+| `assets/panda.gif` | Franka Panda | Real recorded robot/simulation rollout |
+| `assets/ur5e.gif` | UR5e | Real recorded rollout of dynamic re-selection |
+| `assets/sawyer.gif` | Sawyer | Real recorded robot/simulation rollout |
+
+Create an `assets` folder in the repository (GitHub's file upload accepts files into this folder).
+As soon as the images are committed to `main`, the page shows them automatically, and GitHub Pages redeploys.
+
+For static images instead of GIFs, update the corresponding `src` values in `index.html` (e.g. `assets/panda.png`).
+No experiments are claimed on the site until the actual figures are uploaded.
+
+## Publishing
+
+The repository has a GitHub Actions Static HTML workflow in `.github/workflows/static.yml`. Commits to `main` trigger redeployment.
+
+## Editing
+
+The site is a single `index.html` file. Update headings and descriptions directly there; no build tools are required.
