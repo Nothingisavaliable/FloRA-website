@@ -51,7 +51,7 @@ footer{text-align:center;padding:0 20px 36px;font-size:13px;color:#97a6b3}
 <h2>Framework</h2>
 <p>FLoRA represents multiple task-equivalent realizations and evaluates their executability under different robot embodiments. A realization can be selected or reselected when execution conditions change, while local closed-loop control handles motion execution.</p>
 <div class="figure framework">
-<img src="assets/framework.png" alt="FLoRA framework overview" loading="lazy">
+<img src="./assets/framework.png?v=20261107-2" alt="FLoRA framework overview" loading="lazy">
 <div class="placeholder"><svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="5" y="24" width="21" height="27" rx="4"/><rect x="54" y="24" width="21" height="27" rx="4"/><rect x="30" y="5" width="20" height="27" rx="4"/><path d="M26 38h12V32M50 19h12v19M40 32v29H28M40 61h14"/><path d="m50 56 5 5-5 5"/></svg><strong>Framework overview</strong><small>Add your actual figure to <code>assets/framework.png</code> to display it here.</small></div>
 </div><p class="caption">Fig. 1 · FLoRA framework overview</p>
 </section>
@@ -72,6 +72,11 @@ footer{text-align:center;padding:0 20px 36px;font-size:13px;color:#97a6b3}
 </main><footer>FLoRA · The University of Tokyo</footer>
 <script>
 document.querySelectorAll(".figure img").forEach(img=>{
+if(img.getAttribute("alt")==="FLoRA framework overview"){
+ img.addEventListener("error",()=>{
+  if(!img.dataset.fallback){img.dataset.fallback="1";img.src="https://raw.githubusercontent.com/Nothingisavaliable/FloRA-website/main/assets/framework.png";}
+ },{once:true});
+}
 const show=()=>img.parentElement.classList.add("loaded");
 if(img.complete&&img.naturalWidth>0)show();
 else img.addEventListener("load",show,{once:true});
