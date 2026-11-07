@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="FLoRA — Multiple task realizations for embodiment-adaptive robot manipulation.">
+<meta name="theme-color" content="#ffffff"><title>FLoRA — Robot Manipulation</title>
+<style>
+:root{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#172436;background:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0}a{color:inherit}
+.wrap{width:min(950px,calc(100% - 36px));margin:auto}
+header{padding:65px 0 28px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.16em;color:#0f948e;font-weight:750;text-transform:uppercase}
+h1{font-size:clamp(65px,11vw,106px);letter-spacing:-.085em;line-height:1;margin:17px 0 12px;font-weight:850}
+h1 em{color:#12a69e;font-style:normal}.subtitle{font-size:clamp(19px,3.6vw,27px);font-weight:560;line-height:1.38;max-width:790px;margin:0 auto;color:#2d4051}
+.affiliation{font-size:15px;color:#64748b;margin:23px 0}
+.links{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;margin:27px 0 29px}.links a{font-size:14px;font-weight:650;text-decoration:none;border:1px solid #c9d5dc;border-radius:40px;padding:10px 19px;transition:.2s}.links a:hover{transform:translateY(-2px);border-color:#12a69e}.links a.main{background:#132f41;border-color:#132f41;color:#fff}
+main{padding:0 0 60px}
+.demo{background:linear-gradient(145deg,#f7fbfc,#edf9f6);border:1px solid #d9e8e9;border-radius:23px;padding:22px;box-shadow:0 15px 50px #243a4710}
+.demo-head{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+.demo-head strong{font-size:17px}.demo-head small{color:#66798b}
+svg{width:100%;height:auto;display:block}
+.route{fill:none;stroke-width:5;stroke-linecap:round;stroke-dasharray:7 13;opacity:.18;transition:opacity .25s,stroke-width .25s}.route.on{opacity:1;stroke-width:7;animation:march 2.2s linear infinite}@keyframes march{to{stroke-dashoffset:-60}}
+.controls{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:9px}
+.controls button{font:inherit;font-size:14px;font-weight:650;color:#334b5c;background:white;border:1px solid #cad8de;border-radius:24px;padding:11px 17px;cursor:pointer}
+.controls button[aria-pressed=true]{background:#116e68;color:#fff;border-color:#116e68}
+.hint{text-align:center;color:#748493;font-size:12px;margin:17px 0 3px}
+.about{max-width:750px;margin:65px auto 0;padding:0 8px}.about h2{font-size:25px;letter-spacing:-.03em;margin:0 0 12px}.about p{font-size:16px;line-height:1.8;color:#42576a;margin:0 0 16px}
+footer{text-align:center;font-size:13px;color:#9aa9b4;padding:0 0 35px}
+@media(max-width:580px){header{padding-top:44px}.demo{padding:12px}.links a{padding:9px 14px}.controls button{padding:9px 12px}.demo-head strong{font-size:14px}}
+@media(prefers-reduced-motion:reduce){.route.on{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="wrap">
+<div class="kicker">Robot Learning · Project Page</div>
+<h1>FL<em>o</em>RA</h1>
+<p class="subtitle">Multiple Task Realizations for Embodiment-Adaptive Robot Manipulation</p>
+<p class="affiliation">The University of Tokyo</p>
+<nav class="links" aria-label="Project links">
+<a class="main" href="#demo">Interactive Demo</a>
+<a href="#about">About</a>
+<a href="https://github.com/Nothingisavaliable/FloRA-website" target="_blank" rel="noopener noreferrer">Website Code ↗</a>
+</nav>
+</header>
+<main class="wrap">
+<section class="demo" id="demo" aria-labelledby="demo-title">
+<div class="demo-head"><strong id="demo-title">One task. Multiple motion realizations.</strong><small id="selection">Mode B · Middle</small></div>
+<svg viewBox="0 0 920 420" role="img" aria-label="Animated conceptual diagram showing three possible paths between a source cup and target bowl, around an obstacle">
+<defs><linearGradient id="surface" x2="0" y2="1"><stop stop-color="#e8f2f5"/><stop offset="1" stop-color="#d4e4e9"/></linearGradient></defs>
+<rect x="16" y="14" width="888" height="388" rx="18" fill="#fff" opacity=".58"/>
+<rect x="55" y="348" width="810" height="19" rx="9" fill="url(#surface)"/>
+<path d="M108 260L122 331Q185 353 249 331L260 260Z" fill="#b7dfe8" stroke="#518ea4" stroke-width="5"/>
+<ellipse cx="184" cy="260" rx="76" ry="14" fill="#f9ffff" stroke="#518ea4" stroke-width="5"/>
+<path d="M261 276Q308 260 302 303Q300 324 259 320" fill="none" stroke="#518ea4" stroke-width="13" stroke-linecap="round"/>
+<ellipse cx="721" cy="319" rx="99" ry="22" fill="#c5eee7" stroke="#399d91" stroke-width="5"/>
+<path d="M622 319Q627 363 721 364Q815 363 820 319" fill="#a9ded5" stroke="#399d91" stroke-width="5"/>
+<rect x="433" y="259" width="83" height="77" rx="13" fill="#ecc18e" opacity=".55"/><rect x="443" y="269" width="63" height="57" rx="7" fill="#e4a65f" opacity=".45"/>
+<path class="route" id="route-a" stroke="#e5a34e" d="M268 258C333 92 481 59 629 176S697 235 721 281"/>
+<path class="route on" id="route-b" stroke="#11a59c" d="M268 258C376 218 483 185 593 218S684 263 721 281"/>
+<path class="route" id="route-c" stroke="#8b82d4" d="M268 258C321 352 474 352 594 321S691 294 721 281"/>
+<g id="cursor" transform="translate(268 258)"><circle r="22" fill="#13a99d" opacity=".2"/><circle r="11" fill="#0f8f86" stroke="#fff" stroke-width="4"/></g>
+<g fill="#667d8e" font-family="inherit" font-size="16" font-weight="600"><text x="184" y="392" text-anchor="middle">Source</text><text x="721" y="392" text-anchor="middle">Target</text><text x="474" y="392" text-anchor="middle">Obstacle</text></g>
+</svg>
+<div class="controls" role="group" aria-label="Select trajectory realization">
+<button type="button" data-mode="a" aria-pressed="false">Mode A · Upper</button>
+<button type="button" data-mode="b" aria-pressed="true">Mode B · Middle</button>
+<button type="button" data-mode="c" aria-pressed="false">Mode C · Lower</button>
+</div>
+<p class="hint">Conceptual visualization. Not a measured robot rollout or simulation result.</p>
+</section>
+<section id="about" class="about">
+<h2>About FLoRA</h2>
+<p>The same object-centric manipulation task can admit multiple task-equivalent realizations, but their executability depends on robot embodiment, kinematics, and obstacles. FLoRA represents these alternatives explicitly and evaluates them to choose suitable motions for closed-loop execution.</p>
+<p>When conditions change, FLoRA can reselect a feasible realization rather than committing to one fixed task-space motion. Real rollout animations and paper links will be added when ready.</p>
+</section>
+</main>
+<footer>FLoRA · The University of Tokyo</footer>
+<script>
+(()=>{const paths={a:document.getElementById('route-a'),b:document.getElementById('route-b'),c:document.getElementById('route-c')};const cursor=document.getElementById('cursor'),label=document.getElementById('selection');const names={a:'Upper',b:'Middle',c:'Lower'};let current='b',begin=null;
+document.querySelectorAll('[data-mode]').forEach(button=>button.addEventListener('click',()=>{current=button.dataset.mode;begin=null;Object.entries(paths).forEach(([k,path])=>path.classList.toggle('on',k===current));document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===current)));label.textContent='Mode '+current.toUpperCase()+' · '+names[current]}));
+const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function draw(time){if(begin===null)begin=time;const p=paths[current],length=p.getTotalLength(),u=reduced?0.68:((time-begin)%4300)/4300;const q=p.getPointAtLength(u*length);cursor.setAttribute('transform','translate('+q.x+' '+q.y+')');if(!reduced)requestAnimationFrame(draw)}requestAnimationFrame(draw);
+})();
+</script>
+</body></html>
