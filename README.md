@@ -1,33 +1,23 @@
 # FLoRA Project Website
 
-Minimal academic project page for **FLoRA — Multiple Task Realizations for Embodiment-Adaptive Robot Manipulation**.
+A minimal research project page for **FLoRA — Multiple Task Realizations for Embodiment-Adaptive Robot Manipulation**.
 
-## Website
-https://nothingisavaliable.github.io/FloRA-website/
+Live page: https://nothingisavaliable.github.io/FloRA-website/
 
-The site is a dependency-free HTML/CSS page, hosted through GitHub Pages.
+## Add pouring demonstrations
 
-## Add your research figures
+The page displays three GIFs. Upload your own robot rollout recordings into the existing `assets` directory using these exact paths:
 
-Upload the following files using the same names and paths:
+| File | Caption |
+| --- | --- |
+| `assets/panda.gif` | Franka Panda |
+| `assets/ur5e.gif` | UR5e |
+| `assets/sawyer.gif` | Sawyer |
 
-| File | Website location | Recommended content |
-| --- | --- | --- |
-| `assets/framework.png` | Framework | Architecture overview figure, exported from your paper |
-| `assets/panda.gif` | Franka Panda | Real recorded robot/simulation rollout |
-| `assets/ur5e.gif` | UR5e | Real recorded rollout of dynamic re-selection |
-| `assets/sawyer.gif` | Sawyer | Real recorded robot/simulation rollout |
+Until each GIF is uploaded, the corresponding tile shows “Coming soon”. Actual experiment GIFs replace the placeholders automatically after a commit to `main`.
 
-Create an `assets` folder in the repository (GitHub's file upload accepts files into this folder).
-As soon as the images are committed to `main`, the page shows them automatically, and GitHub Pages redeploys.
+Tips: export consistent 4:3 GIFs if possible, keep camera framing and playback speed comparable, and compress large animations to reduce loading time. If you use a different filename or file format, update its `src` in `index.html`.
 
-For static images instead of GIFs, update the corresponding `src` values in `index.html` (e.g. `assets/panda.png`).
-No experiments are claimed on the site until the actual figures are uploaded.
+## Publishing and editing
 
-## Publishing
-
-The repository has a GitHub Actions Static HTML workflow in `.github/workflows/static.yml`. Commits to `main` trigger redeployment.
-
-## Editing
-
-The site is a single `index.html` file. Update headings and descriptions directly there; no build tools are required.
+This is a dependency-free HTML/CSS page served by GitHub Pages. The workflow at `.github/workflows/static.yml` deploys changes from `main`. To edit the page, update `index.html`; no build setup is required.
