@@ -52,6 +52,15 @@ footer{text-align:center;padding:8px 20px 34px;color:#82909a;font-size:13px}
 footer a{text-underline-offset:3px}
 @media(max-width:900px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){header{padding:54px 0 42px}.gallery{grid-template-columns:1fr;gap:24px;max-width:540px;margin:auto}.robot-group h3{max-width:540px;margin:0 auto 16px}.mapping-content{grid-template-columns:1fr 1fr}.robot-group{margin-bottom:40px}}
+
+.dynamic-section{border-top:1px solid #e1e9ec;margin-top:55px;padding-top:58px}
+.dynamic-section .intro{margin-bottom:40px}
+.scenario{margin-bottom:42px}
+.scenario h3{font-size:19px;font-weight:700;margin:0 0 16px}
+.dynamic-gallery{align-items:start}
+.dynamic-demo{margin:0;min-width:0;border:1px solid #e2e9ed;border-radius:14px;overflow:hidden;background:#fff}
+.dynamic-demo figcaption{text-align:center;padding:13px 12px 15px;font-weight:650;font-size:14px}
+@media(max-width:650px){.dynamic-section{margin-top:28px;padding-top:40px}.scenario h3{max-width:540px;margin:0 auto 16px}}
 </style>
 </head>
 <body>
@@ -66,7 +75,7 @@ footer a{text-underline-offset:3px}
     <p class="intro">Representative pouring rollouts across three robot embodiments. Each selection is supported by collision screening and tracking-cost ranking.</p>
     <section class="robot-group" aria-labelledby="robot-0"><h3 id="robot-0">Franka Panda</h3><div class="gallery">
 <article class="demo">
-  <div class="media"><img src="assets/gifs/Panda_m7_E_yp05_yawm20.gif" loading="eager" decoding="async" alt="Panda pouring rollout for selected realization m7"><div class="fallback">Animation unavailable</div></div>
+  <div class="media"><img src="assets/gifs_0/Panda_m7_E_yp05_yawm20.gif" loading="eager" decoding="async" alt="Panda pouring rollout for selected realization m7"><div class="fallback">Animation unavailable</div></div>
   <div class="demo-body">
     <h4>Selected realization m7</h4>
     <div class="metrics">
@@ -87,7 +96,7 @@ footer a{text-underline-offset:3px}
   </div>
 </article>
 <article class="demo">
-  <div class="media"><img src="assets/gifs/Panda_m16_E_yp05_yawm20.gif" loading="eager" decoding="async" alt="Panda pouring rollout for selected realization m16"><div class="fallback">Animation unavailable</div></div>
+  <div class="media"><img src="assets/gifs_0/Panda_m16_E_yp05_yawm20.gif" loading="eager" decoding="async" alt="Panda pouring rollout for selected realization m16"><div class="fallback">Animation unavailable</div></div>
   <div class="demo-body">
     <h4>Selected realization m16</h4>
     <div class="metrics">
@@ -108,7 +117,7 @@ footer a{text-underline-offset:3px}
   </div>
 </article>
 <article class="demo">
-  <div class="media"><img src="assets/gifs/Panda_m4_E_yp05_yawp20.gif" loading="eager" decoding="async" alt="Panda pouring rollout for selected realization m4"><div class="fallback">Animation unavailable</div></div>
+  <div class="media"><img src="assets/gifs_0/Panda_m4_E_yp05_yawp20.gif" loading="eager" decoding="async" alt="Panda pouring rollout for selected realization m4"><div class="fallback">Animation unavailable</div></div>
   <div class="demo-body">
     <h4>Selected realization m4</h4>
     <div class="metrics">
@@ -131,7 +140,7 @@ footer a{text-underline-offset:3px}
 </div></section>
 <section class="robot-group" aria-labelledby="robot-1"><h3 id="robot-1">Sawyer</h3><div class="gallery">
 <article class="demo">
-  <div class="media"><img src="assets/gifs/Sawyer_m1_f21_dx%2B0.03_dy-0.03_yaw%2B0.gif" loading="lazy" decoding="async" alt="Sawyer pouring rollout for selected realization m1"><div class="fallback">Animation unavailable</div></div>
+  <div class="media"><img src="assets/gifs_0/Sawyer_m1_f21_dx%2B0.03_dy-0.03_yaw%2B0.gif" loading="lazy" decoding="async" alt="Sawyer pouring rollout for selected realization m1"><div class="fallback">Animation unavailable</div></div>
   <div class="demo-body">
     <h4>Selected realization m1</h4>
     <div class="metrics">
@@ -152,7 +161,7 @@ footer a{text-underline-offset:3px}
   </div>
 </article>
 <article class="demo">
-  <div class="media"><img src="assets/gifs/Sawyer_m21_f36_supplement_dx%2B0.00_dy%2B0.00_yaw%2B5.gif" loading="lazy" decoding="async" alt="Sawyer pouring rollout for selected realization m21"><div class="fallback">Animation unavailable</div></div>
+  <div class="media"><img src="assets/gifs_0/Sawyer_m21_f36_supplement_dx%2B0.00_dy%2B0.00_yaw%2B5.gif" loading="lazy" decoding="async" alt="Sawyer pouring rollout for selected realization m21"><div class="fallback">Animation unavailable</div></div>
   <div class="demo-body">
     <h4>Selected realization m21</h4>
     <div class="metrics">
@@ -173,7 +182,7 @@ footer a{text-underline-offset:3px}
   </div>
 </article>
 <article class="demo">
-  <div class="media"><img src="assets/gifs/Sawyer_m2_f03_dx%2B0.00_dy-0.03_yaw%2B0.gif" loading="lazy" decoding="async" alt="Sawyer pouring rollout for selected realization m2"><div class="fallback">Animation unavailable</div></div>
+  <div class="media"><img src="assets/gifs_0/Sawyer_m2_f03_dx%2B0.00_dy-0.03_yaw%2B0.gif" loading="lazy" decoding="async" alt="Sawyer pouring rollout for selected realization m2"><div class="fallback">Animation unavailable</div></div>
   <div class="demo-body">
     <h4>Selected realization m2</h4>
     <div class="metrics">
@@ -196,7 +205,7 @@ footer a{text-underline-offset:3px}
 </div></section>
 <section class="robot-group" aria-labelledby="robot-2"><h3 id="robot-2">UR5e</h3><div class="gallery">
 <article class="demo">
-  <div class="media"><img src="assets/gifs/UR5e_m18_f26_dx%2B0.03_dy%2B0.03_yaw%2B10.gif" loading="lazy" decoding="async" alt="UR5e pouring rollout for selected realization m18"><div class="fallback">Animation unavailable</div></div>
+  <div class="media"><img src="assets/gifs_0/UR5e_m18_f26_dx%2B0.03_dy%2B0.03_yaw%2B10.gif" loading="lazy" decoding="async" alt="UR5e pouring rollout for selected realization m18"><div class="fallback">Animation unavailable</div></div>
   <div class="demo-body">
     <h4>Selected realization m18</h4>
     <div class="metrics">
@@ -217,7 +226,7 @@ footer a{text-underline-offset:3px}
   </div>
 </article>
 <article class="demo">
-  <div class="media"><img src="assets/gifs/UR5e_m16_f06_dx%2B0.00_dy%2B0.03_yaw%2B0.gif" loading="lazy" decoding="async" alt="UR5e pouring rollout for selected realization m16"><div class="fallback">Animation unavailable</div></div>
+  <div class="media"><img src="assets/gifs_0/UR5e_m16_f06_dx%2B0.00_dy%2B0.03_yaw%2B0.gif" loading="lazy" decoding="async" alt="UR5e pouring rollout for selected realization m16"><div class="fallback">Animation unavailable</div></div>
   <div class="demo-body">
     <h4>Selected realization m16</h4>
     <div class="metrics">
@@ -238,7 +247,7 @@ footer a{text-underline-offset:3px}
   </div>
 </article>
 <article class="demo">
-  <div class="media"><img src="assets/gifs/UR5e_m25_f25_dx%2B0.03_dy%2B0.03_yaw-10.gif" loading="lazy" decoding="async" alt="UR5e pouring rollout for selected realization m25"><div class="fallback">Animation unavailable</div></div>
+  <div class="media"><img src="assets/gifs_0/UR5e_m25_f25_dx%2B0.03_dy%2B0.03_yaw-10.gif" loading="lazy" decoding="async" alt="UR5e pouring rollout for selected realization m25"><div class="fallback">Animation unavailable</div></div>
   <div class="demo-body">
     <h4>Selected realization m25</h4>
     <div class="metrics">
@@ -259,6 +268,115 @@ footer a{text-underline-offset:3px}
   </div>
 </article>
 </div></section>
+  </section>
+
+  <section class="dynamic-section" aria-labelledby="rq4-title">
+    <h2 id="rq4-title">Dynamic Realization Re-selection (RQ4)</h2>
+    <p class="intro">Pouring under changing execution conditions. Each row compares the same perturbation across three methods.</p>
+    <section class="scenario" aria-labelledby="scenario-0">
+      <h3 id="scenario-0">Bowl displacement · +5 cm (X)</h3>
+      <div class="gallery dynamic-gallery">
+        <figure class="dynamic-demo">
+          <div class="media">
+            <img src="assets/gifs_1/XP5CM_crossformer.gif" alt="CrossFormer pouring rollout under Bowl displacement · +5 cm (X)" loading="lazy" decoding="async">
+            <div class="fallback">Animation unavailable</div>
+          </div>
+          <figcaption>CrossFormer</figcaption>
+        </figure>
+        <figure class="dynamic-demo">
+          <div class="media">
+            <img src="assets/gifs_1/XP5CM_flora-fixed.gif" alt="FLoRA-Fixed pouring rollout under Bowl displacement · +5 cm (X)" loading="lazy" decoding="async">
+            <div class="fallback">Animation unavailable</div>
+          </div>
+          <figcaption>FLoRA-Fixed</figcaption>
+        </figure>
+        <figure class="dynamic-demo">
+          <div class="media">
+            <img src="assets/gifs_1/XP5CM_flora-reselect.gif" alt="FLoRA-Reselect pouring rollout under Bowl displacement · +5 cm (X)" loading="lazy" decoding="async">
+            <div class="fallback">Animation unavailable</div>
+          </div>
+          <figcaption>FLoRA-Reselect</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="scenario" aria-labelledby="scenario-1">
+      <h3 id="scenario-1">Bowl displacement · +10 cm (Y)</h3>
+      <div class="gallery dynamic-gallery">
+        <figure class="dynamic-demo">
+          <div class="media">
+            <img src="assets/gifs_1/YP10CM_crossformer.gif" alt="CrossFormer pouring rollout under Bowl displacement · +10 cm (Y)" loading="lazy" decoding="async">
+            <div class="fallback">Animation unavailable</div>
+          </div>
+          <figcaption>CrossFormer</figcaption>
+        </figure>
+        <figure class="dynamic-demo">
+          <div class="media">
+            <img src="assets/gifs_1/YP10CM_flora-fixed.gif" alt="FLoRA-Fixed pouring rollout under Bowl displacement · +10 cm (Y)" loading="lazy" decoding="async">
+            <div class="fallback">Animation unavailable</div>
+          </div>
+          <figcaption>FLoRA-Fixed</figcaption>
+        </figure>
+        <figure class="dynamic-demo">
+          <div class="media">
+            <img src="assets/gifs_1/YP10CM_flora-reselect.gif" alt="FLoRA-Reselect pouring rollout under Bowl displacement · +10 cm (Y)" loading="lazy" decoding="async">
+            <div class="fallback">Animation unavailable</div>
+          </div>
+          <figcaption>FLoRA-Reselect</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="scenario" aria-labelledby="scenario-2">
+      <h3 id="scenario-2">Bowl displacement · +15 cm (X)</h3>
+      <div class="gallery dynamic-gallery">
+        <figure class="dynamic-demo">
+          <div class="media">
+            <img src="assets/gifs_1/XP15CM_crossformer.gif" alt="CrossFormer pouring rollout under Bowl displacement · +15 cm (X)" loading="lazy" decoding="async">
+            <div class="fallback">Animation unavailable</div>
+          </div>
+          <figcaption>CrossFormer</figcaption>
+        </figure>
+        <figure class="dynamic-demo">
+          <div class="media">
+            <img src="assets/gifs_1/XP15CM_flora-fixed.gif" alt="FLoRA-Fixed pouring rollout under Bowl displacement · +15 cm (X)" loading="lazy" decoding="async">
+            <div class="fallback">Animation unavailable</div>
+          </div>
+          <figcaption>FLoRA-Fixed</figcaption>
+        </figure>
+        <figure class="dynamic-demo">
+          <div class="media">
+            <img src="assets/gifs_1/XP15CM_flora-reselect.gif" alt="FLoRA-Reselect pouring rollout under Bowl displacement · +15 cm (X)" loading="lazy" decoding="async">
+            <div class="fallback">Animation unavailable</div>
+          </div>
+          <figcaption>FLoRA-Reselect</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="scenario" aria-labelledby="scenario-3">
+      <h3 id="scenario-3">O<sub>task</sub> movement</h3>
+      <div class="gallery dynamic-gallery">
+        <figure class="dynamic-demo">
+          <div class="media">
+            <img src="assets/gifs_1/crossformer_obstacle_move.gif" alt="CrossFormer pouring rollout under O_task movement" loading="lazy" decoding="async">
+            <div class="fallback">Animation unavailable</div>
+          </div>
+          <figcaption>CrossFormer</figcaption>
+        </figure>
+        <figure class="dynamic-demo">
+          <div class="media">
+            <img src="assets/gifs_1/flora-fixed_obstacle_move.gif" alt="FLoRA-Fixed pouring rollout under O_task movement" loading="lazy" decoding="async">
+            <div class="fallback">Animation unavailable</div>
+          </div>
+          <figcaption>FLoRA-Fixed</figcaption>
+        </figure>
+        <figure class="dynamic-demo">
+          <div class="media">
+            <img src="assets/gifs_1/flora-reselect_obstacle_move.gif" alt="FLoRA-Reselect pouring rollout under O_task movement" loading="lazy" decoding="async">
+            <div class="fallback">Animation unavailable</div>
+          </div>
+          <figcaption>FLoRA-Reselect</figcaption>
+        </figure>
+      </div>
+    </section>
   </section>
 </main>
 <footer>FLoRA · The University of Tokyo · <a href="https://github.com/Nothingisavaliable/FloRA-website" target="_blank" rel="noopener noreferrer">Website source</a></footer>
