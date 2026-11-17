@@ -6,20 +6,17 @@ Live page: https://nothingisavaliable.github.io/FloRA-website/
 
 ## RQ3: Embodiment-Adaptive Realization Selection
 
-The homepage currently displays nine recorded pouring GIFs, three per robot. Files are stored under `assets/gifs/`.
+The homepage displays nine GIFs from `assets/gifs/`, with three examples per robot (Panda, Sawyer, UR5e). For each example the page preserves the two-stage evaluator data from `showcase_liquid.html`:
 
-| Robot | Display order |
-| --- | --- |
-| Franka Panda | `Panda_m7_E_yp05_yawm20.gif`, `Panda_m16_E_yp05_yawm20.gif`, `Panda_m4_E_yp05_yawp20.gif` |
-| Sawyer | `Sawyer_m1_f21_dx+0.03_dy-0.03_yaw+0.gif`, `Sawyer_m21_f36_supplement_dx+0.00_dy+0.00_yaw+5.gif`, `Sawyer_m2_f03_dx+0.00_dy-0.03_yaw+0.gif` |
-| UR5e | `UR5e_m18_f26_dx+0.03_dy+0.03_yaw+10.gif`, `UR5e_m16_f06_dx+0.00_dy+0.03_yaw+0.gif`, `UR5e_m25_f25_dx+0.03_dy+0.03_yaw-10.gif` |
+- **Stage 1: Collision Filtering** — all 27 candidates are shown with their retained/rejected status, and a retained count.
+- **Stage 2: Tracking-Cost Ranking** — full table of the retained candidates (rank, implementation, position error, orientation error, and tracking cost) with the selected realization highlighted.
 
-Each caption identifies the selected realization. The detailed evaluator candidate tables from the local `showcase_liquid.html` are intentionally omitted from the minimalist landing page.
+A compact two-stage summary appears below every GIF; click **View evaluation details** to expand both full datasets. The original m1–m27 realization names are accessible through **Realization labels (m1–m27)**.
 
 ## Planned RQ4: Dynamic Re-selection
 
-RQ4 GIFs are **not yet included**. The planned layout is a 4-by-3 scenario/method comparison: bowl displacements of 5, 10, and 15 cm, plus task-object movement, with columns for CrossFormer, FLoRA-Fixed, and FLoRA-Reselect. Add these only after uploading the actual recordings; avoid presenting placeholders as experimental results.
+RQ4 videos have **not yet been uploaded**. The planned layout is a 4-by-3 comparison: bowl displacements of 5, 10, and 15 cm, and task-object movement; methods CrossFormer, FLoRA-Fixed, and FLoRA-Reselect. The site does not show unverified placeholders as experimental results.
 
 ## Publishing
 
-The website is a static `index.html`, with no build dependencies. GitHub Pages publishes changes to `main` using `.github/workflows/static.yml`.
+The site is a single static HTML file, published to GitHub Pages from the `main` branch using `.github/workflows/static.yml`.
