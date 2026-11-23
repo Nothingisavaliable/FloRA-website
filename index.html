@@ -72,13 +72,15 @@ footer a{text-underline-offset:3px}
 .comparison-description{font-size:13px;color:#758491;margin:0 0 16px}
 .comparison-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
 .comparison-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.comparison-grid.four-split{grid-template-columns:repeat(3,minmax(0,1fr))}
+.comparison-grid.four-split .comparison-demo:nth-child(4){grid-column:2}
 .comparison-demo{min-width:0;margin:0;background:#fff;border:1px solid #e2e9ed;border-radius:14px;overflow:hidden}
 .comparison-demo figcaption{padding:13px 16px 15px;text-align:center;font-size:14px}
 .comparison-demo figcaption strong{font-weight:700}
 .method-id{font-size:12px;color:#85939f;margin-left:6px}
 .rq3-selected{border-top:1px solid #e1e9ec;padding-top:40px;margin-bottom:30px}
 @media(max-width:900px){.comparison-grid.three{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:600px){.comparison-grid,.comparison-grid.three{grid-template-columns:1fr}.comparison-group{max-width:540px;margin:0 auto 35px}}
+@media(max-width:600px){.comparison-grid,.comparison-grid.three,.comparison-grid.four-split{grid-template-columns:1fr}.comparison-grid.four-split .comparison-demo:nth-child(4){grid-column:auto}.comparison-group{max-width:540px;margin:0 auto 35px}}
 </style>
 </head>
 <body>
@@ -98,11 +100,7 @@ footer a{text-underline-offset:3px}
   <section class="comparison-group" aria-labelledby="rq3-comparison-0">
   <h4 id="rq3-comparison-0">Baseline Comparison · Panda</h4>
   <p class="comparison-description">FLoRA and three baseline methods</p>
-  <div class="comparison-grid ">
-    <figure class="comparison-demo">
-      <div class="media"><img src="assets/gifs_2/Panda_A3_FLoRA.gif" alt="Panda A3 FLoRA pouring comparison" loading="lazy" decoding="async"><div class="fallback">Animation unavailable</div></div>
-      <figcaption><strong>FLoRA</strong> <span class="method-id">A3</span></figcaption>
-    </figure>
+  <div class="comparison-grid four-split">
     <figure class="comparison-demo">
       <div class="media"><img src="assets/gifs_2/Panda_B3_CrossFormer.gif" alt="Panda B3 CrossFormer pouring comparison" loading="lazy" decoding="async"><div class="fallback">Animation unavailable</div></div>
       <figcaption><strong>CrossFormer</strong> <span class="method-id">B3</span></figcaption>
@@ -114,6 +112,10 @@ footer a{text-underline-offset:3px}
     <figure class="comparison-demo">
       <div class="media"><img src="assets/gifs_2/Panda_D3_Vanilla_DP3.gif" alt="Panda D3 Vanilla DP3 pouring comparison" loading="lazy" decoding="async"><div class="fallback">Animation unavailable</div></div>
       <figcaption><strong>Vanilla DP3</strong> <span class="method-id">D3</span></figcaption>
+    </figure>
+    <figure class="comparison-demo">
+      <div class="media"><img src="assets/gifs_2/Panda_A3_FLoRA.gif" alt="Panda A3 FLoRA pouring comparison" loading="lazy" decoding="async"><div class="fallback">Animation unavailable</div></div>
+      <figcaption><strong>FLoRA</strong> <span class="method-id">A3</span></figcaption>
     </figure>
   </div>
 </section>
