@@ -38,7 +38,7 @@ These are illustrative rollouts, not replacement measures for paper-level evalua
 
 ## RQ4: Dynamic Realization Re-selection
 
-The homepage also displays 12 GIFs from `assets/gifs_1/`. In each scenario, animations appear side by side in the order **CrossFormer, FLoRA-Fixed, FLoRA-Reselect**.
+The homepage also displays 12 GIFs from `assets/gif_3/`. These updated GIFs begin shortly before the corresponding dynamic perturbation. In each scenario, animations appear side by side in the order **CrossFormer, FLoRA-Fixed, FLoRA-Reselect**.
 
 | Perturbation | CrossFormer | FLoRA-Fixed | FLoRA-Reselect |
 | --- | --- | --- | --- |
