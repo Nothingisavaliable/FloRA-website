@@ -13,15 +13,38 @@ The homepage displays nine GIFs from `assets/gifs_0/`, with three examples per r
 
 Click **View evaluation details** to expand the two stages. The separate **Realization labels (m1–m27)** control was removed from the public page.
 
+## Additional RQ3: Comparative Rollouts
+
+Seven GIFs in `assets/gifs_2/` are displayed in two distinct comparison groups before the original RQ3 selection gallery.
+
+**Panda — Baseline Comparison**
+
+| Method | GIF |
+| --- | --- |
+| A3: FLoRA | `Panda_A3_FLoRA.gif` |
+| B3: CrossFormer | `Panda_B3_CrossFormer.gif` |
+| C3: Implicit Global | `Panda_C3_Implicit_Global.gif` |
+| D3: Vanilla DP3 | `Panda_D3_Vanilla_DP3.gif` |
+
+**Sawyer — Evaluator Ablation**
+
+| Variant | GIF |
+| --- | --- |
+| A3: FLoRA (two-stage evaluator) | `Sawyer_A3_FLoRA.gif` |
+| E3: Stage-1 Only (collision filtering only) | `Sawyer_E3_Stage-1_Only.gif` |
+| F3: Stage-2 Only (tracking-cost ranking only) | `Sawyer_F3_Stage-2_Only.gif` |
+
+These are illustrative rollouts, not replacement measures for paper-level evaluation. GIFs retain their intrinsic aspect ratios and load lazily.
+
 ## RQ4: Dynamic Realization Re-selection
 
 The homepage also displays 12 GIFs from `assets/gifs_1/`. In each scenario, animations appear side by side in the order **CrossFormer, FLoRA-Fixed, FLoRA-Reselect**.
 
 | Perturbation | CrossFormer | FLoRA-Fixed | FLoRA-Reselect |
 | --- | --- | --- | --- |
-| Bowl +5 cm (X) | `XP5CM_crossformer.gif` | `XP5CM_flora-fixed.gif` | `XP5CM_flora-reselect.gif` |
-| Bowl +10 cm (Y) | `YP10CM_crossformer.gif` | `YP10CM_flora-fixed.gif` | `YP10CM_flora-reselect.gif` |
-| Bowl +15 cm (X) | `XP15CM_crossformer.gif` | `XP15CM_flora-fixed.gif` | `XP15CM_flora-reselect.gif` |
+| Target Container +5 cm (X) | `XP5CM_crossformer.gif` | `XP5CM_flora-fixed.gif` | `XP5CM_flora-reselect.gif` |
+| Target Container +10 cm (Y) | `YP10CM_crossformer.gif` | `YP10CM_flora-fixed.gif` | `YP10CM_flora-reselect.gif` |
+| Target Container +15 cm (X) | `XP15CM_crossformer.gif` | `XP15CM_flora-fixed.gif` | `XP15CM_flora-reselect.gif` |
 | O_task movement | `crossformer_obstacle_move.gif` | `flora-fixed_obstacle_move.gif` | `flora-reselect_obstacle_move.gif` |
 
 All GIFs are displayed at their intrinsic aspect ratio with no fixed-height crop. RQ4 images are lazy-loaded to reduce initial bandwidth usage.
