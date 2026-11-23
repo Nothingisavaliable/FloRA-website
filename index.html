@@ -62,6 +62,23 @@ footer a{text-underline-offset:3px}
 .dynamic-demo figcaption{text-align:center;padding:13px 12px 15px;font-weight:650;font-size:14px}
 @media(max-width:650px){.dynamic-section{margin-top:28px;padding-top:40px}.scenario h3{max-width:540px;margin:0 auto 16px}}
 .project-links{display:flex;justify-content:center;margin-top:24px}.project-links a{display:inline-flex;align-items:center;justify-content:center;gap:11px;padding:12px 24px;border:1px solid #1f2937;border-radius:999px;background:#1f2937;color:#fff;text-decoration:none;font-size:16px;font-weight:700;line-height:1.15;box-shadow:0 2px 6px rgba(15,23,42,.13);transition:background .15s,border-color .15s}.project-links a:hover{background:#334155;border-color:#334155}.project-links a:focus-visible{outline:3px solid #0c9d9a;outline-offset:3px}.project-links svg{display:block;width:24px;height:24px;fill:currentColor;flex:none}
+
+/* RQ3 comparison galleries: natural GIF height preserves simulation overlays. */
+.rq3-comparison{margin:12px auto 54px}
+.rq3-comparison>h3,.rq3-selected>h3{font-size:23px;text-align:center;letter-spacing:-.02em;margin:0 0 9px}
+.comparison-intro{text-align:center;color:#6b7d8b;font-size:14px;line-height:1.6;max-width:800px;margin:0 auto 28px}
+.comparison-group{margin-bottom:36px}
+.comparison-group>h4{font-size:18px;font-weight:700;margin:0 0 6px}
+.comparison-description{font-size:13px;color:#758491;margin:0 0 16px}
+.comparison-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
+.comparison-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.comparison-demo{min-width:0;margin:0;background:#fff;border:1px solid #e2e9ed;border-radius:14px;overflow:hidden}
+.comparison-demo figcaption{padding:13px 16px 15px;text-align:center;font-size:14px}
+.comparison-demo figcaption strong{font-weight:700}
+.method-id{font-size:12px;color:#85939f;margin-left:6px}
+.rq3-selected{border-top:1px solid #e1e9ec;padding-top:40px;margin-bottom:30px}
+@media(max-width:900px){.comparison-grid.three{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.comparison-grid,.comparison-grid.three{grid-template-columns:1fr}.comparison-group{max-width:540px;margin:0 auto 35px}}
 </style>
 </head>
 <body>
@@ -74,7 +91,56 @@ footer a{text-underline-offset:3px}
 <main class="container">
   <section aria-labelledby="rq3-title">
     <h2 id="rq3-title">Embodiment-Adaptive Realization Selection (RQ3)</h2>
-    <p class="intro">Representative pouring rollouts across three robot embodiments. Each selection is supported by collision screening and tracking-cost ranking.</p>
+    <p class="intro">Representative pouring rollouts showcasing embodiment-aware selection, baseline comparisons, and evaluator ablations.</p>
+<section class="rq3-comparison" aria-labelledby="rq3-comparison">
+  <h3 id="rq3-comparison">Comparative Rollouts</h3>
+  <p class="comparison-intro">Representative method and evaluator-ablation comparisons. These examples complement the quantitative results reported in the paper.</p>
+  <section class="comparison-group" aria-labelledby="rq3-comparison-0">
+  <h4 id="rq3-comparison-0">Baseline Comparison · Panda</h4>
+  <p class="comparison-description">FLoRA and three baseline methods</p>
+  <div class="comparison-grid ">
+    <figure class="comparison-demo">
+      <div class="media"><img src="assets/gifs_2/Panda_A3_FLoRA.gif" alt="Panda A3 FLoRA pouring comparison" loading="lazy" decoding="async"><div class="fallback">Animation unavailable</div></div>
+      <figcaption><strong>FLoRA</strong> <span class="method-id">A3</span></figcaption>
+    </figure>
+    <figure class="comparison-demo">
+      <div class="media"><img src="assets/gifs_2/Panda_B3_CrossFormer.gif" alt="Panda B3 CrossFormer pouring comparison" loading="lazy" decoding="async"><div class="fallback">Animation unavailable</div></div>
+      <figcaption><strong>CrossFormer</strong> <span class="method-id">B3</span></figcaption>
+    </figure>
+    <figure class="comparison-demo">
+      <div class="media"><img src="assets/gifs_2/Panda_C3_Implicit_Global.gif" alt="Panda C3 Implicit Global pouring comparison" loading="lazy" decoding="async"><div class="fallback">Animation unavailable</div></div>
+      <figcaption><strong>Implicit Global</strong> <span class="method-id">C3</span></figcaption>
+    </figure>
+    <figure class="comparison-demo">
+      <div class="media"><img src="assets/gifs_2/Panda_D3_Vanilla_DP3.gif" alt="Panda D3 Vanilla DP3 pouring comparison" loading="lazy" decoding="async"><div class="fallback">Animation unavailable</div></div>
+      <figcaption><strong>Vanilla DP3</strong> <span class="method-id">D3</span></figcaption>
+    </figure>
+  </div>
+</section>
+<section class="comparison-group" aria-labelledby="rq3-comparison-1">
+  <h4 id="rq3-comparison-1">Evaluator Ablation · Sawyer</h4>
+  <p class="comparison-description">Full two-stage evaluator versus single-stage variants</p>
+  <div class="comparison-grid three">
+    <figure class="comparison-demo">
+      <div class="media"><img src="assets/gifs_2/Sawyer_A3_FLoRA.gif" alt="Sawyer A3 FLoRA pouring comparison" loading="lazy" decoding="async"><div class="fallback">Animation unavailable</div></div>
+      <figcaption><strong>FLoRA</strong> <span class="method-id">A3</span></figcaption>
+    </figure>
+    <figure class="comparison-demo">
+      <div class="media"><img src="assets/gifs_2/Sawyer_E3_Stage-1_Only.gif" alt="Sawyer E3 Stage-1 Only pouring comparison" loading="lazy" decoding="async"><div class="fallback">Animation unavailable</div></div>
+      <figcaption><strong>Stage-1 Only</strong> <span class="method-id">E3</span></figcaption>
+    </figure>
+    <figure class="comparison-demo">
+      <div class="media"><img src="assets/gifs_2/Sawyer_F3_Stage-2_Only.gif" alt="Sawyer F3 Stage-2 Only pouring comparison" loading="lazy" decoding="async"><div class="fallback">Animation unavailable</div></div>
+      <figcaption><strong>Stage-2 Only</strong> <span class="method-id">F3</span></figcaption>
+    </figure>
+  </div>
+</section>
+</section>
+<section class="rq3-selected" aria-labelledby="rq3-selected-title">
+  <h3 id="rq3-selected-title">Selected Realizations Across Embodiments</h3>
+  <p class="comparison-intro">Nine selected task realizations across three robot embodiments, with collision-filtering and tracking-cost evaluation data.</p>
+</section>
+
     <section class="robot-group" aria-labelledby="robot-0"><h3 id="robot-0">Franka Panda</h3><div class="gallery">
 <article class="demo">
   <div class="media"><img src="assets/gifs_0/Panda_m7_E_yp05_yawm20.gif" loading="eager" decoding="async" alt="Panda pouring rollout for selected realization m7"><div class="fallback">Animation unavailable</div></div>
