@@ -52,3 +52,5 @@ All GIFs are displayed at their intrinsic aspect ratio with no fixed-height crop
 ## Publishing
 
 The site is static HTML and is published by GitHub Pages from `main` via `.github/workflows/static.yml`.
+
+This public repository publishes the project website using GitHub Actions.
